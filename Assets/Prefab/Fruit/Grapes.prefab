@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd64e8eafb00a546b44d3c6c546692c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePlayer: {fileID: 0}
   fruitIndex: 0
+  hasBeenDropped: 0
 --- !u!212 &7567992240578265132
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137,4 +137,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.5

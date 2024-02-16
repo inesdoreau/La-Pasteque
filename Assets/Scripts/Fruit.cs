@@ -11,7 +11,7 @@ public class Fruit : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hasBeenDropped = true;
-        MovePlayer.canSpawnFish = true;
+        MovePlayerFruit.canSpawnFruit = true;
         if (collision.gameObject.CompareTag("Fruit"))
         {
             Fruit collidedFruit = collision.gameObject.GetComponent<Fruit>();
@@ -24,10 +24,10 @@ public class Fruit : MonoBehaviour
                 collision.gameObject.SetActive(false);
                 Destroy(collision.gameObject);
 
-                if(fruitIndex < MovePlayer.Instance.fishesPrefab.Length)
-                    MovePlayer.Instance.InstantiateNextFish(fruitIndex + 1, transform.position);
+                if(fruitIndex < MovePlayerFruit.Instance.fruitsPrefab.Length)
+                    MovePlayerFruit.Instance.InstantiateNextFruit(fruitIndex + 1, transform.position);
 
-                MovePlayer.Instance.IncreaseScore(MovePlayer.Instance.fishesPrefab[fruitIndex].points);
+                MovePlayerFruit.Instance.IncreaseScore(MovePlayerFruit.Instance.fruitsPrefab[fruitIndex].points);
                 gameObject.SetActive(false);
                 Destroy(gameObject);
             }

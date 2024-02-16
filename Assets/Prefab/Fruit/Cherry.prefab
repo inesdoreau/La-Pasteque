@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7367998853947044917}
   - component: {fileID: -4844634408990291176}
   - component: {fileID: 8277270568158045411}
-  - component: {fileID: 8205913285750951613}
   - component: {fileID: 1310524169340725331}
+  - component: {fileID: 8639868515819705994}
   m_Layer: 0
   m_Name: Cherry
   m_TagString: Fruit
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd64e8eafb00a546b44d3c6c546692c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePlayer: {fileID: 0}
   fruitIndex: 0
+  hasBeenDropped: 0
 --- !u!212 &8277270568158045411
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101,22 +101,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8205913285750951613
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6905975342167747614}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.54
 --- !u!50 &1310524169340725331
 Rigidbody2D:
   serializedVersion: 4
@@ -138,3 +122,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &8639868515819705994
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905975342167747614}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.49999997

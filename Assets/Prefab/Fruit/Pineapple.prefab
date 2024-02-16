@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -1921642846875158027}
   - component: {fileID: 8908277082938007728}
   - component: {fileID: 629866870958658266}
-  - component: {fileID: 319242699587718614}
+  - component: {fileID: 6730658558932654610}
   m_Layer: 0
   m_Name: Pineapple
   m_TagString: Fruit
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd64e8eafb00a546b44d3c6c546692c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePlayer: {fileID: 0}
   fruitIndex: 0
+  hasBeenDropped: 0
 --- !u!212 &8908277082938007728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122,8 +122,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &319242699587718614
-CapsuleCollider2D:
+--- !u!58 &6730658558932654610
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,5 +136,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.16, y: 3}
-  m_Direction: 0
+  serializedVersion: 2
+  m_Radius: 0.5
