@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Globale Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Globale
+  m_TableCollectionNameGuidString: 4c9ee6c9415506044be45d08afc0280d
+  m_Entries:
+  - m_Id: 132495069184
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1817959354368
+    m_Key: Help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1896208289792
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1998624804864
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3564631117824
+    m_Key: HowToPlay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3775491362816
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3871821942784
+    m_Key: HowToPlay1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4001107169280
+    m_Key: HowToPlay2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4093994225664
+    m_Key: HowToPlay3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5887126294528
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7068292632576
+    m_Key: LanguageSelected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9112315383808
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9195178053632
+    m_Key: Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9302086668288
+    m_Key: MadeBy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9758913482752
+    m_Key: MusicMade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22432757993472
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22764951064576
+    m_Key: Replay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22904822714368
+    m_Key: Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22969075257344
+    m_Key: BestScore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23101694955520
+    m_Key: GameOver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23309753405440
+    m_Key: BackToMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23462111498240
+    m_Key: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23702675804160
+    m_Key: Evolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23793734144000
+    m_Key: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23924873252864
+    m_Key: Help1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24083485052928
+    m_Key: Help2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24182026031104
+    m_Key: Help3
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2453084572647686168
+  references:
+    version: 2
+    RefIds:
+    - rid: 2453084572647686168
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1708428514323

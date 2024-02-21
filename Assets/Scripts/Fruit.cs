@@ -8,10 +8,13 @@ public class Fruit : MonoBehaviour
 
     public bool hasBeenDropped = false;
 
+    public ParticleSystem particle;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hasBeenDropped = true;
         MovePlayerFruit.canSpawnFruit = true;
+
         if (collision.gameObject.CompareTag("Fruit"))
         {
             Fruit collidedFruit = collision.gameObject.GetComponent<Fruit>();
@@ -27,7 +30,10 @@ public class Fruit : MonoBehaviour
                 if(fruitIndex < MovePlayerFruit.Instance.fruitsPrefab.Length)
                     MovePlayerFruit.Instance.InstantiateNextFruit(fruitIndex + 1, transform.position);
 
-                MovePlayerFruit.Instance.IncreaseScore(MovePlayerFruit.Instance.fruitsPrefab[fruitIndex].points);
+                GameManager.Instance.IncreaseScore(MovePlayerFruit.Instance.fruitsPrefab[fruitIndex].points);
+                particle.transform.parent = null;
+                particle.Play();
+                AudioManager.Instance.PlaySFX("pop2");
                 gameObject.SetActive(false);
                 Destroy(gameObject);
             }

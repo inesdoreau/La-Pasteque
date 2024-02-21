@@ -6,6 +6,7 @@ using UnityEngine;
 public class MovePlayerFruit : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 5f;
+    [SerializeField] private float borderOffset = 0.2f;
     [SerializeField] private Transform leftBorder;
     [SerializeField] private Transform rightBorder;
 
@@ -17,11 +18,7 @@ public class MovePlayerFruit : MonoBehaviour
     [SerializeField] private SpriteRenderer nextFruitPreview;
     private int nextFruitIndex;
 
-
     public FruitList[] fruitsPrefab;
-
-    [SerializeField] private TextMeshProUGUI scoreText;
-    int currentScore = 0;
 
     public static bool canSpawnFruit = true;
 
@@ -45,7 +42,7 @@ public class MovePlayerFruit : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q) && transform.position.x > currentMinXPosition)
+        if (Input.GetKey(KeyCode.A) && transform.position.x > currentMinXPosition)
         {
             transform.position -= new Vector3(movementSpeed * Time.deltaTime, 0, 0);
         }
@@ -67,7 +64,8 @@ public class MovePlayerFruit : MonoBehaviour
 
     public void InstantiateNextFruit(int index, Vector3 position)
     {
-        GameObject newFruit = Instantiate(fruitsPrefab[index].prefab);
+        GameObject newFruit = Instantiate(fruitsPrefab[index].prefab, GameManager.Instance.allFruits);
+        //newFruit.transform.parent = GameManager.Instance.allFruits;
         Fruit newFruitScript = newFruit.GetComponent<Fruit>();
         newFruitScript.fruitIndex = index;
         newFruit.transform.position = position;
@@ -79,14 +77,14 @@ public class MovePlayerFruit : MonoBehaviour
         nextFruitIndex = Random.Range(0, 4);
         nextFruitPreview.color = fruitsPrefab[nextFruitIndex].color;
         currentFruitPreview.color = fruitsPrefab[currentFruitIndex].color;
-        currentFruitPreview.transform.localScale = fruitsPrefab[currentFruitIndex].prefab.transform.lossyScale;
+        currentFruitPreview.transform.localScale = fruitsPrefab[currentFruitIndex].prefab.transform.localScale ;
         CalculatePlayerBound();
     }
 
     private void CalculatePlayerBound()
     {
-        currentMinXPosition = leftBorder.position.x + currentFruitPreview.bounds.size.x / 2 + 0.1f;
-        currentMaxXPosition = rightBorder.position.x - currentFruitPreview.bounds.size.x / 2 - 0.1f;
+        currentMinXPosition = leftBorder.position.x + currentFruitPreview.bounds.size.x / 2 + borderOffset;
+        currentMaxXPosition = rightBorder.position.x - currentFruitPreview.bounds.size.x / 2 - borderOffset;
 
         if (transform.position.x < currentMinXPosition)
         {
@@ -96,12 +94,6 @@ public class MovePlayerFruit : MonoBehaviour
         {
             transform.position = new Vector3(currentMaxXPosition, transform.position.y, transform.position.z);
         }
-    }
-
-    public void IncreaseScore(int value)
-    {
-        currentScore += value;
-        scoreText.text = currentScore.ToString();
     }
 }
 
