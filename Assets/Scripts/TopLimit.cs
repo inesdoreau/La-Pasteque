@@ -7,14 +7,14 @@ public class TopLimit : MonoBehaviour
 {
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Fish"))
+        if (collision.gameObject.CompareTag("Fruit"))
         {
-            Fish fishScript = collision.gameObject.GetComponent<Fish>();
-            if (fishScript.hasBeenDropped)
+            Fruit fruitScript = collision.gameObject.GetComponent<Fruit>();
+            if (fruitScript.hasBeenDropped)
             {
                 print("Game Over");
-
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                AudioManager.Instance.PlaySFX("GameOverSoft");
+                GameManager.Instance.GameOver();
             }
         }
     }
